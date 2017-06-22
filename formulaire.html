@@ -1,0 +1,48 @@
+Très basic mais fonctionnel, créer un fichier "test_previ.php" dans le dossier club
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<title>formulaire</title>
+<meta charset= "UTF-8" />
+</head>
+    
+<body>
+    
+
+    <form method="POST" action="test_previ.php" enctype="multipart/form-data">
+<input type="text" name="titre" value="Titre de la lecture" id="titre" /><br /><br />    
+<input type="text" name="auteur" value="Auteur" id="auteur" /><br/><br/>
+             <label for="langue">Langue :</label><br/>
+                   <input list="langage" type="text" id="diff_langue">
+<datalist id="langage">
+  <option value="allemand">
+  <option value="anglais">
+  <option value="français">
+  <option value="---">
+</datalist><br/><br/>
+        
+      <input type="text" name="editeur" value="Editeur" id="editeur"/><br/><br/>
+    <input type="date" name="date_publication" value="Date de la publication" id="date_publication"/><br/><br/>
+          <input type="hidden" name="date_ajout" value="datedujour"/> 
+        <input type="text" name="conception_graph" value="Conception graphique" id="conception_graph"/><br/><br/>
+<textarea name="description" id="description">Description libre et facultative sur le pourquoi de cet ouvrage</textarea><br/><br/>
+         <label for="theme">Thèmes :</label><br/>
+                   <input list="thematique" type="text" id="thematique">
+<datalist id="tags">
+  <option value="art">
+  <option value="théorie">
+  <option value="linguistique">
+  <option value="science">
+</datalist><br/><br/>
+         <input type="text" name="pseudo" value="Ton nom/pseudo" id="pseudo"/><br/><br/>
+     <input type="email" name="mail" value="Ton email" id="mail" /><br /><br/>
+        <input type="submit" name="submit" value="envoyer ta lecture" id="submit"/>
+    </form>
+</body>
+</html>
+  
+            
+    
+ 
