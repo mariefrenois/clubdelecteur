@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<title>formulaire</title>
+<meta charset= "UTF-8" />
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+<body>
+    
+<div id="formulaire">
+    <form method="POST" action="test_previ.php" enctype="multipart/form-data">
+<input type="text" name="titre" value="Titre de la lecture" id="titre" /><br /><br />    
+<input type="text" name="auteur" value="Auteur" id="auteur" /><br/><br/>
+            <input name="langue" list="langue_list" placeholder="Choisir une langue" onfocus="this.value=''" /> 
+<datalist id="langue_list"> 
+	<option value="fr">Français</option> 
+	<option value="en">Anglais</option> 
+	<option value="de">Allemand</option> 
+	<option value="bg">Bulgare</option> 
+	<option value="hr">Croate</option> 
+	<option value="da">Danois</option> 
+	<option value="es">Espagnol</option> 
+	<option value="et">Estonien</option> 
+	<option value="fi">Finnois</option> 
+	<option value="el">Grec</option> 
+	<option value="hu">Hongrois</option> 
+	<option value="ga">Irlandais</option> 
+	<option value="it">Italien</option> 
+	<option value="lv">Letton</option> 
+	<option value="lt">Lituanien</option> 
+	<option value="mt">Maltais</option> 
+	<option value="nl">Néerlandais</option> 
+	<option value="pl">Polonais</option> 
+	<option value="pt">Portugais</option> 
+	<option value="ro">Roumain</option> 
+	<option value="sk">Slovaque</option> 
+	<option value="sl">Slovène</option> 
+	<option value="sv">Suédois</option> 
+	<option value="cs">Tchèque</option> 
+	<option>Franglais</option> 
+</datalist><br/><br/>
+
+        
+      <input type="text" name="editeur" value="Editeur" id="editeur"/><br/><br/>
+    <input type="date" name="date_publication" value="Date de la publication" id="date_publication"/><br/><br/>
+          <input type="hidden" name="date_ajout" value="datedujour"/> 
+        <input type="text" name="conception_graph" value="Conception graphique" id="conception_graph"/><br/><br/>
+<textarea name="description" id="description">Description libre et facultative sur le pourquoi de cet ouvrage</textarea><br/><br/>
+        
+                   <input name="theme" list="theme_list" placeholder="Choisir un thème" onfocus="this.value=''" /> 
+<datalist id="theme_list"> 
+<option value="art">
+  <option value="théorie">
+  <option value="linguistique">
+  <option value="science">
+  <option value="__">
+</datalist><br/><br/>
+         <input type="text" name="pseudo" value="Ton nom/pseudo" id="pseudo"/><br/><br/>
+     <input type="email" name="mail" value="Ton email" id="mail" /><br /><br/>
+        
+      
+        <input type="submit" name="submit" value="partager ta lecture" id="submit"/>
+    </form></div>
+</body>
+</html>
+  
+            
+    
+ 

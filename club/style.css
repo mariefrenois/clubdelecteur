@@ -1,0 +1,11 @@
+#formulaire {font-size: 10px;}
+textarea {width: 500px;max-width: 100%;
+height: 100px; margin-top: 20px;   
+ background-color: #00ffce;border-style: none;}
+
+#column1 {width: 400px; margin-top: 40px; margin-left: 80px; color: #000000; font-family: serif;}
+#column2 {width: 400px; margin-top: 40px; margin-left: 160px; color: #000000; font-family: serif;}
+
+.slips {font-size:15px;}
+.titrage {font-style: oblique;
+font-size:20px;  }
