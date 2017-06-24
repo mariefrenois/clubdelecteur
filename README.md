@@ -7,8 +7,9 @@ liens :
 
         http://www.lephpfacile.com/forum/1-php-mysql/4923-upload-mp3
         
-A faire : - création de la page article
-
+A faire : 
+       
+          - création de la page article
           - création des liens entre chaque pages
           - ajout fichier dans formulaire
           - limitation d'envoi
