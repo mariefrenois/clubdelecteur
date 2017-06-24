@@ -2,7 +2,7 @@
     <head>
         <title>home</title>
         <link rel="stylesheet" type="text/css" href="">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         
@@ -14,7 +14,7 @@
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information ORDER BY titre') as $result)
         {
         echo '<a href="article.php/';
         echo $result['id'];
@@ -23,6 +23,8 @@
         echo $result['titre'];
         echo '</a>';
         echo '</div>';}
+       
+         
     ?>
         
         </div>
@@ -32,7 +34,7 @@
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information ORDER BY auteur') as $result)
         {
         echo '<a href="article.php/';
         echo $result['id'];
@@ -50,7 +52,7 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information  ORDER BY date_publication') as $result)
         {
         echo '<a href="article.php/';
         echo $result['id'];
@@ -59,16 +61,15 @@
         echo $result['date_publication'];
         echo '</a>';
         echo '</div>';}
-    ?>
+    ?></div>
         
-        </div>
         <div id="column4">
         <div class="titrage">date d'ajout :</div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information ORDER BY date_ajout') as $result)
         {
         echo '<a href="article.php/';
         echo $result['id'];
@@ -86,7 +87,7 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information ORDER BY langue') as $result)
         {
         echo '<a href="article.php/';
         echo $result['id'];
@@ -134,7 +135,7 @@
     ?>
         
         </div>
-        <div id="column7">
+        <div id="column8">
         <div class="titrage">taille de fichier :</div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
@@ -150,32 +151,34 @@
         echo '</a>';
         echo '</div>';}
     ?>
-        
         </div>
-        <div class="titrage">type de fichier/scan :</div>
+            <div id="column9">
+        <div class="titrage">fichiers scan :</div>
     <?php
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     foreach($db->query('SELECT * FROM information') as $result)
         {
         echo '<div class="slips">'.$result['theme'].'</div>';}
     ?>
-        
-        <div class="titrage">type de fichier/texte brut :</div>
+        </div>
+            <div id="column10">
+        <div class="titrage">fichiers texte brut :</div>
     <?php
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     foreach($db->query('SELECT * FROM information') as $result)
         {
         echo '<div class="slips">'.$result['theme'].'</div>';}
     ?>
-        
-        <div class="titrage">type de fichier/audio :</div>
+        </div>
+            <div id="column11">
+        <div class="titrage">fichiers audio :</div>
     <?php
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     foreach($db->query('SELECT * FROM information') as $result)
         {
         echo '<div class="slips">'.$result['theme'].'</div>';}
     ?>
-        
+        </div>
 
 
             
