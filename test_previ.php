@@ -1,207 +1,22 @@
-Une reprise de l'ancien code pour se connecter à la db et uploader les info du formulaire : 
-
  <?php
-
-/**
-  * Shortcut to username and password
-*/
-     
-
-       
-///////////COVER : //////////////////
-
-   
-                   
+if (isset($_POST['submit'])) {                   
 $titre = $_POST['titre'];
 $description = $_POST['description'];
 $auteur = $_POST['auteur'];
-//$auteurlire = $_POST['auteurlire'];
-//$categorie = $_POST['categorie'];
-//$fichier_n_nom = $_FILES['cover']['name'];        
-                   
- if(isset($_FILES['cover']['name']))  {
-//    /////QUE PASSE ? 
-   echo $categorie ;
-
-///////////COVER : //////////////////
-    
-// on récupère les infos du fichier à uploader
-    $fichier_temp = $_FILES['cover']['tmp_name'];
-    $fichier_nom = $_FILES['cover']['name'];
- 
-// on défini les dimensions et le type du fichier
-    list($fichier_larg, $fichier_haut, $fichier_type, $fichier_attr) = getimagesize($fichier_temp);
- 
-// infos de contrôle du fichier
-    $fichier_poids_max = 500000;
-    $fichier_h_max = 2448;
-    $fichier_l_max = 3264;
-         
-    
-    
- 
-// dossier de destination
- $fichier_dossier = 'formulaire_files/' ; //. basename($_FILES['cover']['name'])); echo "L'envoi a bien été effectué !";
- 
-// extension du fichier
-    $fichier_ext = substr($fichier_nom, strrpos($fichier_nom, '.') + 1);
- 
-// on renomme le fichier
-    $fichier_date = date("ymdhis");
-    $fichier_n_nom = $fichier_date . "." . $fichier_ext;
-         
-         
- echo "categorie : $categorie <br /> " ;
-         ////A PARTIR DE LA --> ça coince :
-         
-// on vérifie s'il y a bien un fichier à uploader
-    if (isset($fichier_temp) && is_uploaded_file($fichier_temp)) {
-// on vérifie le poids du fichier
-    if (filesize($fichier_temp) < $fichier_poids_max) {
-         
-// types de fichiers autorises 1=gif / 2=jpg / 3=png
- if (($fichier_type === 1) || ($fichier_type === 2) || ($fichier_type === 3)) {
-// on vérifie si l'image n'est pas trop grande
- if (($fichier_larg <= $fichier_l_max) && ($fichier_haut <= $fichier_h_max)) {
-// si le fichier est ok, on l'upload sur le serveur
-            if (move_uploaded_file($_FILES['cover']['tmp_name'], $fichier_dossier . $fichier_n_nom)) {
-                
-            echo "Le fichier a été uploadé avec succès<br /><br />";
-            echo '<a href="' .$fichier_dossier. $fichier_n_nom . '"><img src="'  .$fichier_dossier. $fichier_n_nom . '"></a><br />';
-            echo $_FILES['cover']['tmp_name'];
-                 
-            }
-            else
-            echo "Le fichier n'a pas pu être uploadé<br />";
-        }
-        else
-            echo "Le fichier est trop grand<br />";
-        }
-        else
-        echo "Le fichier n'a pas le bon format<br />";
-    }
-    else
-        echo "Le fichier est trop lourd<br />";
-    }}
-    else
-    echo "Pas de fichier à uploader<br />";
-
-//$fichier = $_FILES['cover'];
-//else      $fichier="";
-
-
-////// IMAGEPLUS : ///////////////
-
-    
-    $file_count = count($_FILES["imageplus"]['name']);
-	
-	echo $file_count . " file(s) sent... <BR><BR/>";
-    
-    if(count($_FILES['imageplus']['name']) > 0){
-        
-for($i=0; $i<count($_FILES['imageplus']['name']); $i++) {
-    
-    //Get the temp file path
-    $tmpFilePath = $_FILES['imageplus']['tmp_name']["$i"];
-    $nom_plus = $_FILES['imageplus']['name']["$i"];
-
-    //Make sure we have a filepath
-    if($tmpFilePath != ""){
- //save the filename
-        
-        
-    // renomme toi de manière chelou :
-//   $extension = substr($nom_plus, strrpos($nom_plus, '.') + 1);
-//   $file_date = date("ymdhis");
-//   $shortname = $file_date . "." . $extension;
-//        
-     //   $extension = end(explode(".", $_FILES["contenu"]["name"]));
-     
-$extension = end(explode(".", $_FILES["imageplus"]["name"]["$i"]));
-
-$shortname = date("ymdhis").$nom_plus.'.'.$extension;
-    
-    
-    //$_FILES['imageplus']['name'][$i];
-
-//save the url and the file
-$filePath = "uploads/plus/" ;
-    //. date('d-m-Y-H-i-s').'-'.$_FILES['imageplus']['name'][$i];
-
-//Upload the file into the temp dir
-//if(move_uploaded_file($tmpFilePath, $filePath)) {
-    
-if (move_uploaded_file($_FILES['imageplus']['tmp_name']["$i"], $filePath . $shortname)) {
-    
-    $count++;
-    
-//$query  = "UPDATE INTO article(imageplus)";
-//$query .= "VALUES ('$filePath.$shortname')";
-//$result = mysqli_query($link, $query);
-    
-     echo "Le fichier a été uploadé avec succès<br /><br />";
-            echo '<a href="' .$filePath . $shortname . '"><img src="'  .$filePath . $shortname . '"></a><br />';
-            echo $_FILES['imageplus']['tmp_name']["$i"];
-            
-            }
-            else
-            echo "Le fichier n'a pas pu être uploadé<br />";
-        }
-  
-}} 
-
-
-/////PDF :
-
-
-$allowedExts = array(
-  "pdf",
-  "doc",
-  "docx"
-); 
-
-$allowedMimeTypes = array( 
-  'application/msword',
-  'application/pdf',
-  'image/gif',
-  'image/jpeg',
-  'image/png'
-);
-
-$extension = end(explode(".", $_FILES["contenu"]["name"]));
-
-
-if ( 2000000 < $_FILES["contenu"]["size"]  ) {
-  die( 'Please provide a smaller file [E/1].' );
+$pseudo = $_POST['pseudo'];
+$theme = $_POST['theme'];
+$langue = $_POST['langue'];
+$mail= $_POST['mail'];
+$editeur= $_POST['editeur'];
+$conception_graph= $_POST['conception_graph'];
+echo '<br>' .$langue. '</br>';
+echo '<br>' .$pseudo. '</br>';
+echo '<br>' .$theme. '</br>';
 }
-
-if ( ! ( in_array($extension, $allowedExts ) ) ) {
- 
-    //die('Please provide another file type [E/2].');
-  echo 'Please provide another file type [E/2].';
-}
-
-if ( in_array( $_FILES["contenu"]["type_contenu"], $allowedMimeTypes ) ) 
-{
-  $date = new DateTime();
-  $contenu_name = $date->getTimestamp().'.'.$extension;
-
- move_uploaded_file($_FILES["contenu"]["tmp_name"],'uploads/pdf/'.$contenu_name);
- //'.$_FILES["contenu"]["tmp_name"]); 
- echo "Pdf transfer = Success";
-} 
-     
-else {
-    
- //   echo "NOTHING UPLOAD" ;
-}
-
-
 /**
   * Connect to the database
   * http://php.net/manual/en/mysqli.real-connect.php
 */
-
 $user = 'root';
 $pass = 'root';
 $db   = 'club';
@@ -211,15 +26,12 @@ $link = mysqli_init();
 if (!$link) {
     die('mysqli_init failed');
 }
-
 if (!$link->options(MYSQLI_INIT_COMMAND, 'SET AUTOCOMMIT = 0')) {
     die('Setting MYSQLI_INIT_COMMAND failed');
 }
-
 if (!$link->options(MYSQLI_OPT_CONNECT_TIMEOUT, 5)) {
     die('Setting MYSQLI_OPT_CONNECT_TIMEOUT failed');
 }
-
 if (!$link->real_connect(
   $host,
   $user,
@@ -228,56 +40,37 @@ if (!$link->real_connect(
 )) {
     die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
 }
-
 // Quick test
 // echo 'Success... ' . $link->host_info . "\n";
-
 $connection = $link->real_connect(
   $host,
   $user,
   $pass,
   $db
 );
-
 /**
   * More testing
 */
 // echo '$link: '; print_r($link); echo "\n";
 // echo '$connection: '; print($connection); echo "\n";
 // echo '$connection _r: '; print_r($connection); echo "\n";
-
 if (!$connection) {
   die('Database connection failed.');
 }
-
 /**
   * Insert data into table
 */
-$query  = "INSERT INTO information(id, titre, description, pseudo,auteur, theme)";
-$query .= "VALUES ('','$titre','$description', '$pseudo','$auteur', '$theme')";
-
+$query  = "INSERT INTO information(id, titre, description, pseudo,auteur,theme, langue, mail, conception_graph, editeur)";
+$query .= "VALUES ('','$titre','$description','$pseudo','$auteur', '$theme', '$langue', '$mail','$conception_graph','$editeur')";
 //$tmpFilePath
-
     //  '$filePath.$shortname',
-      
-
 // $result = mysqli_query($connection, $query);
 $result = mysqli_query($link, $query);
-
 if (!$result) {
   die('Error: ' . mysqli_error($link));
 }
-
-
 /**
   * Close connection
 */
 $link->close();
-
 ?>
-
-
-
-
-  
-   
