@@ -1,3 +1,6 @@
+! remets à jour ton style.css dans un dossier css, sinon ça va s'afficher tout bizarre !
+
+
 <html>
     <head>
         <title>home</title>
@@ -12,22 +15,19 @@
     
 //pour page d'acceuil
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
-    
+     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information ORDER BY titre') as $result)
         {
-        echo '<a href="article.php/';
+        
+        echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['titre'];
+          echo '<div class="slips">', $result['titre'],'<div class="index">', $result['id'],'</div>','</div>';
         echo '</a>';
-        echo '</div>';}
-       
-         
-    ?>
+
+    }  ?> </div>
         
-        </div>
         <div id="column2">
         <div class="titrage">auteur :</div>
     <?php
@@ -36,50 +36,51 @@
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information ORDER BY auteur') as $result)
         {
-        echo '<a href="article.php/';
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['auteur'];
-        echo '</a>';
-        echo '</div>';}
+        echo '<div class="slips">', $result['auteur'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+        
+    }
     ?>
         
         </div>
         <div id="column3">
-        <div class="titrage">date de publication :</div>
+        <div class="titrage">publié le :</div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information  ORDER BY date_publication') as $result)
-        {
-        echo '<a href="article.php/';
+         {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['date_publication'];
-        echo '</a>';
-        echo '</div>';}
-    ?></div>
+        echo '<div class="slips">', $result['date_publication'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+        
+    }
+    ?>
+        
+        </div>
         
         <div id="column4">
-        <div class="titrage">date d'ajout :</div>
+        <div class="titrage">ajouté le :</div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information ORDER BY date_ajout') as $result)
-        {
-        echo '<a href="article.php/';
+         {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['date_ajout'];
-        echo '</a>';
-        echo '</div>';}
-    ?>
+        echo '<div class="slips">', $result['date_ajout'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
         
+    }
+    ?>
         </div>
         <div id="column5">
         <div class="titrage">langue :</div>
@@ -88,17 +89,15 @@
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information ORDER BY langue') as $result)
-        {
-        echo '<a href="article.php/';
+          {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['langue'];
-        echo '</a>';
-        echo '</div>';}
-    ?>
+        echo '<div class="slips">', $result['langue'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }
+    ?></div>
         
-        </div>
         <div id="column6">
         <div class="titrage">conception graphique :</div>
     <?php
@@ -106,17 +105,14 @@
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information') as $result)
-        {
-        echo '<a href="article.php/';
+             {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['conception_graph'];
-        echo '</a>';
-        echo '</div>';}
-    ?>
-        
-        </div>
+        echo '<div class="slips">', $result['conception_graph'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }
+    ?></div>
         <div id="column7">
         <div class="titrage">thématique :</div>
     <?php
@@ -124,43 +120,42 @@
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information') as $result)
-        {
-        echo '<a href="article.php/';
+              {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['theme'];
-        echo '</a>';
-        echo '</div>';}
-    ?>
-        
-        </div>
+        echo '<div class="slips">', $result['theme'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }
+    ?></div>
         <div id="column8">
-        <div class="titrage">taille de fichier :</div>
+        <div class="titrage">pseudo :</div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
     foreach($db->query('SELECT * FROM information') as $result)
-        {
-        echo '<a href="article.php/';
+             {
+       echo '<a href="article.php?id=';
         echo $result['id'];
         echo '">';
-        echo '<div class="slips">';
-        echo $result['titre'];
-        echo '</a>';
-        echo '</div>';}
-    ?>
-        </div>
+        echo '<div class="slips">', $result['pseudo'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }
+    ?></div>
             <div id="column9">
         <div class="titrage">fichiers scan :</div>
     <?php
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     foreach($db->query('SELECT * FROM information') as $result)
-        {
-        echo '<div class="slips">'.$result['theme'].'</div>';}
-    ?>
-        </div>
+             {
+       echo '<a href="article.php?id=';
+        echo $result['id'];
+        echo '">';
+        echo '<div class="slips">', $result['scan'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }
+    ?></div>
             <div id="column10">
         <div class="titrage">fichiers texte brut :</div>
     <?php
