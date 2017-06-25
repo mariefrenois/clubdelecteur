@@ -16,6 +16,8 @@ A faire :
           - création de la page flux relatif à chaque tiroir
           
           
+          
 Mémo idées pour plus tard :
-               
+          
+        
           - essayer de voir si par exemple on pourrait sélectionner plusieurs catégorie en même temps, exemple :                         art et français...
