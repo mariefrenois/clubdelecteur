@@ -8,8 +8,14 @@ liens :
         
 A faire : 
        
-          - création de la page article
+          - création de la page article (DONE)
           - création des liens entre chaque pages
-          - ajout 'fichier' dans formulaire
+          - ajout 'fichier' dans formulaire (DONE) --> et leur upload dans test_previsualisation 
           - limitation d'envoi
-          - classement des listes par différents ordres
+          - classement des listes par différents ordres(DONE ordre alphabétique)
+          - création de la page flux relatif à chaque tiroir
+          
+          
+Mémo idées pour plus tard :
+               
+          - essayer de voir si par exemple on pourrait sélectionner plusieurs catégorie en même temps, exemple :                         art et français...
