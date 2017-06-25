@@ -1,0 +1,32 @@
+#formulaire {font-size: 10px;}
+textarea {width: 500px;max-width: 100%;
+height: 100px; margin-top: 20px;   
+ background-color: #00ffce;border-style: none;}
+
+#column1,#column2,#column3,#column4,#column5,#column6,#column7,#column8,#column9,#column10,#column11 {margin-top: 80px;width: 130px;font-family: serif; position: absolute;}
+#column1 {margin-left: 40px}
+#column2 {margin-left: 190px}
+#column3 {margin-left: 340px}
+#column4 {margin-left: 490px}
+#column5 {margin-left: 640px}
+#column6 {margin-left: 790px}
+#column7 {margin-left: 940px}
+#column8 {margin-left: 1090px}
+#column9 {margin-left: 1240px}
+#column10 {margin-left: 1390px}
+#column11 {margin-left: 1540px}
+
+.slips {font-size:13px; }
+.index {font-size:12px; text-align: right; margin-top: -14px; }
+.titrage {font-style: oblique;
+font-size:18px;}
+
+a {text-decoration:none; color: black}
+a:visited {
+  color: #00ffce;
+}
+a:hover, a:focus, a:active {
+  text-decoration: overline;
+  color: #000000;
+ 
+}
