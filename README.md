@@ -17,7 +17,7 @@ A faire :
           - ajouter toutes les thématiques possibles dans theme
           - trouver système de classement intéressant
           - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça
-          - 
+          - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
           
           
           
