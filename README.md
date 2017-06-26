@@ -10,7 +10,7 @@ A faire :
        
           - création de la page article (DONE)
           - création des liens entre chaque pages
-          - ajout 'fichier' dans formulaire (DONE) --> et leur upload dans test_previsualisation 
+          - ajout 'fichier' dans formulaire (DONE) --> et leur upload dans test_previsualisation (ok pour png) en attente pour le SON
           - limitation d'envoi
           - classement des listes par différents ordres(DONE ordre alphabétique)
           - création de la page flux relatif à chaque tiroir (plus ou moins DONE)
