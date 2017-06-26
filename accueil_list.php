@@ -1,40 +1,42 @@
-! remets à jour ton style.css dans un dossier css, sinon ça va s'afficher tout bizarre !
-
-
 <html>
     <head>
-        <title>home</title>
+        <title>home_list</title>
         <link rel="stylesheet" type="text/css" href="">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        
+        <div id="menu">
+        <a href="formulaire.html">DÉPOT</a>
+            <a href="apropos.html">À PROPOS</a>
+        </div>
         <div id="column1">
-        <div class="titrage">titre :</div>
+        <div class="titrage">
+            <a href="titre_flux.php">
+            titre :
+            </a>
+            </div>
     <?php
     
 //pour page d'acceuil
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
      
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information ORDER BY titre') as $result)
-        {
-        
-        echo '<a href="article.php?id=';
-        echo $result['id'];
+    foreach($db->query('SELECT * FROM information GROUP BY titre ORDER BY titre') as $result)
+      {
+       echo '<a href="titre.php?titre=';
+        echo $result['titre'];
         echo '">';
-          echo '<div class="slips">', $result['titre'],'<div class="index">', $result['id'],'</div>','</div>';
-        echo '</a>';
-
-    }  ?> </div>
+        echo '<div class="slips">', $result['titre'],'<div class="index">', $result['id'],'</div>','</div>';
+  echo '</a>';
+         }  ?> </div>
         
         <div id="column2">
-        <div class="titrage">auteur :</div>
+        <div class="titrage"> <a href="auteur.php">auteur :</a></div>
     <?php
     $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information ORDER BY auteur') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY auteur ORDER BY auteur') as $result)
         {
        echo '<a href="article.php?id=';
         echo $result['id'];
@@ -47,12 +49,12 @@
         
         </div>
         <div id="column3">
-        <div class="titrage">publié le :</div>
+        <div class="titrage"><a href="date_publication.php">publié le :</a></div>
     <?php
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information  ORDER BY date_publication') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY date_publication ORDER BY date_publication') as $result)
          {
        echo '<a href="article.php?id=';
         echo $result['id'];
@@ -71,7 +73,7 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information ORDER BY date_ajout') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY date_ajout  ORDER BY date_ajout') as $result)
          {
        echo '<a href="article.php?id=';
         echo $result['id'];
@@ -88,12 +90,12 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information ORDER BY langue') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY langue ORDER BY langue') as $result)
           {
-       echo '<a href="article.php?id=';
-        echo $result['id'];
+       echo '<a href="langue.php?langue=';
+        echo $result['langue'];
         echo '">';
-        echo '<div class="slips">', $result['langue'],'<div class="index">', $result['id'],'</div>','</div>';
+        echo '<div class="slips">', $result['langue'],'</div>';
   echo '</a>';
          }
     ?></div>
@@ -104,7 +106,7 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY conception_graph ORDER BY conception_graph ') as $result)
              {
        echo '<a href="article.php?id=';
         echo $result['id'];
@@ -119,12 +121,12 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY theme ORDER BY theme') as $result)
               {
-       echo '<a href="article.php?id=';
-        echo $result['id'];
+       echo '<a href="theme.php?theme=';
+        echo $result['theme'];
         echo '">';
-        echo '<div class="slips">', $result['theme'],'<div class="index">', $result['id'],'</div>','</div>';
+        echo '<div class="slips">', $result['theme'],'</div>';
   echo '</a>';
          }
     ?></div>
@@ -134,12 +136,12 @@
         $db = new PDO('mysql:host=localhost;dbname=club', 'root', 'root');
     
     //faire une requête pour récupérer des éléments de la db
-    foreach($db->query('SELECT * FROM information') as $result)
+    foreach($db->query('SELECT * FROM information GROUP BY pseudo ORDER BY pseudo') as $result)
              {
-       echo '<a href="article.php?id=';
-        echo $result['id'];
+       echo '<a href="pseudo.php?pseudo=';
+        echo $result['pseudo'];
         echo '">';
-        echo '<div class="slips">', $result['pseudo'],'<div class="index">', $result['id'],'</div>','</div>';
+        echo '<div class="slips">', $result['pseudo'],'</div>';
   echo '</a>';
          }
     ?></div>
