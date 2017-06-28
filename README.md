@@ -10,13 +10,13 @@ liens :
 A faire : 
        
           - création de la page article (DONE)
-          - création des liens entre chaque pages
+          - création des liens entre chaque pages (DONE)
           - ajout 'fichier' dans formulaire (DONE) --> et leur upload dans test_previsualisation (ok pour png) en attente pour le SON
-          - limitation d'envoi
+          - limitation d'envoi 
           - classement des listes par différents ordres(DONE ordre alphabétique)
           - création de la page flux relatif à chaque tiroir (plus ou moins DONE)
           - ajouter toutes les thématiques possibles dans theme
-          - trouver système de classement intéressant
+          - trouver système de classement intéressant 
           - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça (DOOONE)
           - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
           - ajouter un + pour les themes, les auteurs, les conceptions graphi...
