@@ -1,0 +1,11 @@
+
+
+<div id="column8">
+              <div class="titrage">par fichiers :</div>
+        
+        <div class="slips"><a href="texte_flux.php">TEXTES</a> </div>
+        <div class="slips"><a href="audio_flux.php">AUDIO</a> </div>
+            <div class="slips"><a href="scan_flux.php">NUMÉRISÉS</a> </div>
+              
+            
+           </div>
