@@ -19,7 +19,7 @@ A faire :
           - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça
           - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
           - ajouter un + pour les themes, les auteurs, les conceptions graphi...
-          - si c'est une revue, une magazine --> ajouter un champs ?
+         
           
           
           
