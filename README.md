@@ -16,7 +16,7 @@ A faire :
           - création de la page flux relatif à chaque tiroir (plus ou moins DONE)
           - ajouter toutes les thématiques possibles dans theme
           - trouver système de classement intéressant
-          - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça
+          - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça (DOOONE)
           - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
           - ajouter un + pour les themes, les auteurs, les conceptions graphi...
          
