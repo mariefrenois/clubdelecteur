@@ -5,6 +5,7 @@ liens :
 
         https://www.alsacreations.com/article/lire/1334-html5-element-datalist.html
         http://www.lephpfacile.com/forum/1-php-mysql/4923-upload-mp3
+        http://fr2.php.net/manual/fr/function.mysql-escape-string.php
         
 A faire : 
        
