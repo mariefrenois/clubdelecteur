@@ -15,7 +15,7 @@ A faire :
           - limitation d'envoi 
           - classement des listes par différents ordres(DONE ordre alphabétique)
           - création de la page flux relatif à chaque tiroir (plus ou moins DONE)
-          - ajouter toutes les thématiques possibles dans theme
+          - ajouter toutes les thématiques possibles dans theme (DONE GRÂCE À WIKIPÉDIA)
           - trouver système de classement intéressant 
           - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça (DOOONE)
           - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
