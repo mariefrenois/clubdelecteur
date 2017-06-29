@@ -1,0 +1,58 @@
+img{
+width: 100%;
+padding: 8px;
+
+}
+
+.col-md-8{
+border-right:0.5px #00F solid;
+}
+
+.col-md-4{ 
+
+}
+
+.col-md-4 h5{ 
+font-size: 18pt;
+margin-top: 80px;
+}
+
+.col-md-4 h3{ 
+font-size: 14pt;
+margin-top: -5pt;
+}
+
+body{
+font-family:'Times new roman';
+}
+
+h1{
+text-decoration: underline;
+margin: 10px;
+}
+
+h3{
+font-size: 12pt;
+}
+
+h4{
+text-decoration: underline;
+font-size: 14pt;   
+}
+.header{
+display: inline-block;
+border: 5px #FFF solid;    
+}
+
+.soustitre{
+display: inline-block;
+text-decoration: underline;
+}
+
+#vide{
+height:30px;
+width: 100%;
+border-top: 1px blue solid;
+}
+
+
