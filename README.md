@@ -19,8 +19,9 @@ A faire :
           - trouver système de classement intéressant 
           - pouvoir écrire des 'apostrophes' dans les textes bruts : ligne de code pour ça (DOOONE)
           - dans "accueil list" remplacer l'ID par le nombre de dépôt présents dans la catégorie
-          - ajouter un + pour les themes, les auteurs, les conceptions graphi...
+          - // ajouter un + pour les themes, les auteurs, les conceptions graphi...
           - modifier les cases 'formulaire' en grisé (DONE)
+          - styliser page article
             
           
           
