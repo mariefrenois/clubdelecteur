@@ -1,12 +1,16 @@
 # clubdelecteur
 plateforme de partage de lecture et de rencontre hasardeuse 
 
+
 liens : 
 
         https://www.alsacreations.com/article/lire/1334-html5-element-datalist.html
         http://www.lephpfacile.com/forum/1-php-mysql/4923-upload-mp3
         http://fr2.php.net/manual/fr/function.mysql-escape-string.php
         https://stackoverflow.com/questions/7991425/php-how-to-check-if-image-file-exists
+        
+liens/inspiration :
+http://tempsreel.nouvelobs.com/culture/20170630.OBS1440/la-book-machine-ce-bon-genie-qui-trouve-le-livre-fait-pour-vous.html
         
 A faire : 
        
