@@ -11,7 +11,8 @@ liens :
         
 liens/inspiration :
 http://tempsreel.nouvelobs.com/culture/20170630.OBS1440/la-book-machine-ce-bon-genie-qui-trouve-le-livre-fait-pour-vous.html
-        
+http://spectorbooks.com/365-days-of-invisible-work
+
 A faire : 
        
           - création de la page article (DONE)
